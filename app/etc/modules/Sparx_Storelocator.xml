@@ -4,7 +4,7 @@
     <Sparx_Storelocator>
       <active>true</active>
       <codePool>community</codePool>
-      <version>0.1.0</version>
+      <version>0.1.3</version>
     </Sparx_Storelocator>
   </modules>
 </config>

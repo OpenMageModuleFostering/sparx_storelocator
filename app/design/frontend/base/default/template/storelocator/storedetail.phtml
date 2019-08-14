@@ -11,8 +11,11 @@ if($storeData && $storeData->getId()){
 if($storeData->getZoomLevel()){
   $zoomlevel = $storeData->getZoomLevel();  
 }        
-}     
+} 
+
+$apikey = Mage::getStoreConfig('storelocator/settings/apikey',$storeid);    
 ?>
+<?php if(!empty($apikey)):?>
 <div id="store-locator-container store-locator-detail">
  
     <h1><?php echo $this->__("Store Locator"); ?></h1>	
@@ -43,5 +46,9 @@ if($storeData->getZoomLevel()){
         jQuery('#map-container').storeLocator({'slideMap' : true, 'originMarker' : true, 'zoomLevel' : <?php echo $zoomlevel; ?>, 'fullMapStart' : true, 'defaultLoc': true, 'defaultLat': '<?php echo $lat; ?>', 'defaultLng' : '<?php echo $lng; ?>' });
     });
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $apikey;?>"></script>
+<?php else: ?>
 
+    <div><?php echo $this->__('Please enter correct google map api key in admin configuration. To know more ')?><a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank"><?php echo $this->__('Click here')?></a></div>
 
+<?php endif ?>

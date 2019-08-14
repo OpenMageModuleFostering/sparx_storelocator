@@ -35,6 +35,15 @@
                             <show_in_store>0</show_in_store>
                             <comment>Enable Store Locator</comment>
                         </active>
+                        <apikey translate="label">
+                            <label>Google Map Api Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Please enter your google map api key</comment>
+                        </apikey>
                         <jquery translate="label">
                             <label>Enable jQuery</label>
                             <frontend_type>select</frontend_type>
