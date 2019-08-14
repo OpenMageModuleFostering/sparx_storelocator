@@ -1,30 +1,11 @@
 <?xml version="1.0"?>   
-<layout version="0.1.0">   
-
+<layout version="0.1.0">  
     <default>
         <reference name="top.links">
             <action method="addLink" ifconfig="storelocator/settings/active" translate="label title" module="storelocator"><label>Store Locator</label><url helper="storelocator/getStorelocatorUrl"/><title>Store Locator</title><prepare/><urlParams/><position>50</position></action>
         </reference>
     </default> 
-
-    <storelocator_index_index> 
-        <reference name="head">  
-            <action method="addCss">
-                <stylesheet>storelocator/css/map.css</stylesheet>
-            </action>
-            <action ifconfig="storelocator/settings/jquery"    method="addItem"><type>skin_js</type><name>storelocator/js/jquery-1.10.1.min.js</name></action>
-              <action method="addItem"><type>skin_js</type><name>storelocator/js/noConflict.js</name></action>
-           <action method="addItem"><type>skin_js</type><name>storelocator/js/handlebars-1.0.0.min.js</name></action>
-            
-            <block type="core/text" name="google.cdn.jquery"> 
-                <action method="setText">
-                    <text><![CDATA[<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
-                    </text>
-                </action>
-            </block>
-             <action method="addItem"><type>skin_js</type><name>storelocator/js/jquery.storelocator.js</name></action>
-           
-        </reference>
+    <storelocator_index_index>       
         <reference name="root">   
             <action method="setTemplate">
                 <template>page/1column.phtml</template>
@@ -44,7 +25,10 @@
            <action method="addItem"><type>skin_js</type><name>storelocator/js/handlebars-1.0.0.min.js</name></action>
             <block type="core/text" name="google.cdn.jquery"> 
                 <action method="setText">
-                    <text><![CDATA[<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+                    <text>
+						<![CDATA[<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+						
+                    <script type="text/javascript">jQuery.noConflict();</script>]]>
                     </text>
                 </action>
             </block>
