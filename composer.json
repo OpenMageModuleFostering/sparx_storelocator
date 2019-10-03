@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Sparx_Storelocator",
+    "name": "OpenMageModuleFostering\/Sparx_Storelocator",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "With the help of  store locator your customer can easily find out your stores, dealers and products.",
     "authors": [
-    {
-        "name": "Sparx",
-        "email": "alok.kumar@sparxtechnologies.com"
-    }
-],
+        {
+            "name": "Sparx",
+            "email": "alok.kumar@sparxtechnologies.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
